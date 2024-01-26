@@ -3,7 +3,7 @@
 // Do not use any browser or node-specific API!
 // -------------------------------------------------------------
 export const xor = {
-    encode(str) {
+    /*encode(str) {
         if (!str) return str;
         return encodeURIComponent(
             str
@@ -27,6 +27,15 @@ export const xor = {
                 )
                 .join('') + (search.length ? '?' + search.join('?') : '')
         );
+    },*/
+
+    encode(str) {
+        if (!str) return str;
+        return encodeURIComponent(str);
+    },
+    decode(str) {
+        if (!str) return str;
+        return decodeURIComponent(str);
     },
 };
 
